@@ -14,7 +14,6 @@ public class Cliente {
             container.connectToServer(Cliente.class, uri);
             System.out.println("✅ Conectado al servidor WebSocket.\n");
 
-            // Hilo para leer desde consola y enviar
             Thread enviarThread = new Thread(() -> {
                 Scanner scanner = new Scanner(System.in);
                 while (true) {
@@ -29,9 +28,6 @@ public class Cliente {
                 }
             });
             enviarThread.start();
-
-            // El hilo principal queda esperando en onMessage
-
         } catch (Exception e) {
             System.out.println("[❌ Error de conexión] " + e.getMessage());
         }

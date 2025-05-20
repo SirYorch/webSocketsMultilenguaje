@@ -2,14 +2,20 @@ Para poder ejecutar el trabajo se necesita tener instalado maven, y websockets, 
 
 los comandos son.
 para el servidor:
+
 python server.py
 
 para los clientes
+
 python:
+
 python clientes/cliente.py
 
 java:
+
 cd clientes/Cliente
+
 mvn clean compile
+
 mvn exec:java
 
